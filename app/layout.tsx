@@ -27,7 +27,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" suppressHydrationWarning className={sfPro.variable}>
+    <html
+      lang="en"
+      suppressHydrationWarning
+      className={`scroll-smooth ${sfPro.variable}`}
+    >
       {/* <ThemeProvider attribute="class" defaultTheme="dark"> */}
       <body className="font-sans antialiased bg-background text-foreground selection:bg-primary-500/30">
         <Navbar />

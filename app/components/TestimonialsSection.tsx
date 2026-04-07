@@ -71,7 +71,10 @@ export const TestimonialsSection = () => {
   };
 
   return (
-    <section className="bg-background py-12 md:py-24 overflow-hidden">
+    <section
+      id="testimonials"
+      className="bg-background py-12 md:py-24 overflow-hidden"
+    >
       <div className="max-w-7xl mx-auto px-6 lg:px-0 mb-12">
         <div className="flex justify-center">
           <Badge label="Testimonials" className="mb-3" />

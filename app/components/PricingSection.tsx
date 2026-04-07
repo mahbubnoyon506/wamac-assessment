@@ -6,7 +6,7 @@ import CheckIcon from "./ui/CheckIcon";
 
 export const PricingSection = () => {
   return (
-    <section className="bg-background py-12 md:py-24 px-6">
+    <section id="pricing" className="bg-background py-12 md:py-24 px-6">
       <div className="max-w-7xl mx-auto grid grid-col-1 lg:grid-cols-12 gap-6">
         {/* Left Card: Bonus Information */}
         <div className="lg:col-span-7 bg-neutral-900/40 border border-neutral-800 rounded-4xl p-5 md:p-16 flex flex-col justify-center">

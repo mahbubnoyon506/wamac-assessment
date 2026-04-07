@@ -5,8 +5,14 @@ import { SwitchTheme } from "./SwitchTheme";
 import { Button } from "./ui/Button";
 import { Divider } from "./ui/Divider";
 
+const menuItems = ["overview", "curriculum", "testimonials", "pricing"];
+
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+
+  const handleNavClick = () => {
+    setIsOpen(false);
+  };
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background backdrop-blur-md ">
@@ -24,15 +30,16 @@ export const Navbar = () => {
 
         {/* Desktop Links - Hidden on SM and MD (under 768px) */}
         <div className="hidden lg:flex items-center gap-8 text-body-sm font-medium text-neutral-400">
-          <a href="#" className="hover:text-white transition-colors">
-            Curriculum
-          </a>
-          <a href="#" className="hover:text-white transition-colors">
-            Pricing
-          </a>
-          <a href="#" className="hover:text-white transition-colors">
-            Support
-          </a>
+          {menuItems.map((i) => (
+            <a
+              key={i}
+              href={`#${i}`}
+              onClick={handleNavClick}
+              className="capitalize hover:text-white transition-colors duration-300"
+            >
+              {i}
+            </a>
+          ))}
         </div>
 
         {/* Right Actions */}
@@ -82,15 +89,16 @@ export const Navbar = () => {
       {isOpen && (
         <div className="lg:hidden absolute top-20 left-0 w-full bg-neutral-950 border-b border-neutral-800 p-6 flex flex-col gap-6 animate-in slide-in-from-top">
           <div className="flex flex-col gap-4 text-body font-medium text-neutral-400">
-            <a href="#" className="hover:text-white">
-              Curriculum
-            </a>
-            <a href="#" className="hover:text-white">
-              Pricing
-            </a>
-            <a href="#" className="hover:text-white">
-              Support
-            </a>
+            {menuItems.map((i) => (
+              <a
+                key={i}
+                href={`#${i}`}
+                onClick={handleNavClick}
+                className="capitalize hover:text-white transition-colors duration-300"
+              >
+                {i}
+              </a>
+            ))}
           </div>
           <div className="h-[1px] bg-neutral-800" />
           <div className="flex flex-col gap-4">

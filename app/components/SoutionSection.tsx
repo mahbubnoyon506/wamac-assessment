@@ -14,7 +14,7 @@ const images = [
 
 export const SoutionSection = () => {
   return (
-    <section className="bg-background py-12 md:py-24 px-6">
+    <section id="overview" className="bg-background py-12 md:py-24 px-6">
       <div className="max-w-7xl mx-auto">
         {/* Top Content */}
         <div className="text-center mb-12 md:mb-24">

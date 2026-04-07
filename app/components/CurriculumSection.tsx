@@ -71,7 +71,7 @@ export const CurriculumSection = () => {
   };
 
   return (
-    <section className="bg-background py-12 md:py-24 px-6">
+    <section id="curriculum" className="bg-background py-12 md:py-24 px-6">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col items-center mb-24">
           <Badge label="Course Curriculum" className="mb-6" />
