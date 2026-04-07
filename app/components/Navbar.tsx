@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import Image from "next/image";
-import { StatusToggle } from "./ui/Switch";
+import { StatusToggle } from "./Switch";
 import { Button } from "./ui/Button";
 import { Divider } from "./ui/Divider";
 
@@ -9,7 +9,7 @@ export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-neutral-950/80 backdrop-blur-md ">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-background backdrop-blur-md ">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 h-20 flex items-center justify-between">
         {/* Logo Section */}
         <div className="flex items-center gap-3">

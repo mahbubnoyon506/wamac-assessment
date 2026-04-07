@@ -2,7 +2,7 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #08090A;
 
   --primary-50: #EBF5FF;
   --primary-100: #E1EFFF;
@@ -40,13 +40,21 @@
 
 
   /* Font Sizes */
-  --size-h1: 52px;
+  /* --size-h1: 52px;
   --size-h2: 40px;
   --size-h3: 28px;
   --size-h4: 24px;
   --size-h5: 20px;
   --size-body: 17px;
-  --size-body-sm: 15px;
+  --size-body-sm: 15px; */
+  --size-h1: clamp(2.25rem, 5vw + 1rem, 3.25rem);
+  --size-h2: clamp(1.75rem, 4vw + 0.5rem, 2.5rem);
+  --size-h3: clamp(1.375rem, 2vw + 1rem, 1.75rem);
+  --size-h4: clamp(1.125rem, 1.5vw + 0.75rem, 1.25rem);
+  --size-h5: 1.125rem;
+  --size-body: clamp(1rem, 0.2vw + 0.9rem, 1.0625rem);
+  --size-body-sm: 0.9375rem;
+  /* 15px */
 
   /* Line Heights */
   --lh-heading: 1.15;
@@ -56,9 +64,9 @@
 @theme inline {
   /* breakpoints */
   --breakpoint-xs: 25.75rem;
-  --breakpoint-sm: 32.5rem;
-  --breakpoint-md: 42.5rem;
-  --breakpoint-lg: 61.3rem;
+  --breakpoint-sm: 32.56rem;
+  --breakpoint-md: 42.56rem;
+  --breakpoint-lg: 61.31rem;
 
   /* fonts */
   --font-sans: var(--font-sf-pro);
@@ -105,7 +113,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: #08090A;
     --foreground: #ededed;
   }
 }
@@ -116,36 +124,39 @@
     background: var(--background);
     color: var(--foreground);
     font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    line-height: var(--lh-heading);
+    font-weight: 500;
+    letter-spacing: -0.02em;
   }
 
   h1 {
     font-size: var(--size-h1);
-    line-height: var(--lh-heading);
-    font-weight: 700;
   }
 
   h2 {
     font-size: var(--size-h2);
-    line-height: var(--lh-heading);
-    font-weight: 600;
   }
 
   h3 {
     font-size: var(--size-h3);
-    line-height: var(--lh-heading);
-    font-weight: 500;
   }
 
   h4 {
     font-size: var(--size-h4);
     line-height: var(--lh-body);
-    font-weight: 500;
   }
 
   h5 {
     font-size: var(--size-h5);
     line-height: var(--lh-body);
-    font-weight: 500;
   }
 
   p,
@@ -153,6 +164,8 @@
     font-size: var(--size-body);
     line-height: var(--lh-body);
     font-weight: 400;
+    color: var(--neutral-400);
+    /* Default muted look from design */
   }
 
   .body-sm {
@@ -206,7 +219,6 @@
   }
 
   .bg-hero-texture {
-    /* Reference your texture image */
     background-image: url('/assets/images/texture.png');
     background-size: 80px 80px;
     background-repeat: repeat;
@@ -214,7 +226,6 @@
     opacity: 0.18;
   }
 
-  /* Core Radial Blue Glow */
   .bg-hero-glow {
     background: radial-gradient(circle at center,
         rgba(36, 102, 242, 0.18) 0%,
@@ -222,7 +233,6 @@
   }
 
   .carousel-container-flush-right {
-    /* Calculates the margin needed to align with a max-w-7xl container */
     margin-right: calc(-50vw + 50%);
     width: calc(100vw - (100vw - 100%) / 2);
   }

@@ -2,6 +2,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import { Navbar } from "./components/Navbar";
 import { Footer } from "./components/Footer";
+import { ThemeProvider } from "next-themes";
 
 const sfPro = localFont({
   src: [
@@ -26,12 +27,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`dark ${sfPro.variable}`}>
-      <body className="font-sans antialiased bg-neutral-950 text-white selection:bg-primary-500/30">
-        <Navbar />
-        {children}
-        <Footer />
-      </body>
+    <html
+      lang="en"
+      suppressHydrationWarning
+      className={`dark ${sfPro.variable}`}
+    >
+      <ThemeProvider attribute="class" defaultTheme="dark">
+        <body className="font-sans antialiased bg-neutral-950 text-white selection:bg-primary-500/30">
+          <Navbar />
+          {children}
+          <Footer />
+        </body>
+      </ThemeProvider>
     </html>
   );
 }

@@ -1,33 +1,26 @@
 import Image from "next/image";
-import { Badge } from "./ui/Badge";
+import Badge from "./ui/Badge";
 import { Button } from "./ui/Button";
 
 export const HeroSection = () => {
   return (
-    <section className="relative pt-32 pb-24 bg-neutral-950 overflow-hidden">
-      {/* BACKGROUND LAYERS */}
-      {/* 1. Base Gradient Fade from black */}
+    <section className="bg-background relative pt-32 pb-12 md:pb-24 overflow-hidden">
       <div className="absolute inset-0 bg-hero-fade pointer-events-none" />
-
-      {/* 2. The Radial Glow Layer */}
       <div className="absolute inset-0 bg-hero-glow pointer-events-none" />
-
-      {/* 3. The Pattern/Texture Layer */}
-      {/* Positioned behind content, blended */}
       <div className="absolute top-1/2 left-0 w-full h-full -translate-y-1/2 bg-hero-texture pointer-events-none" />
 
       {/* CONTENT LAYER */}
       <div className="relative z-10 max-w-7xl mx-auto px-6 text-center">
         {/* Discount Badge */}
-        <Badge>30% off until 4d : 2h : 41m : 17s</Badge>
+        <Badge label="30% off until 4d : 2h : 41m : 17s" />
 
         {/* Heading 1 (Regular, 52px, 115% LH) */}
-        <h1 className="max-w-[720px] mx-auto text-h1 font-regular mb-6 tracking-tight">
+        <h1 className="max-w-180 mx-auto text-h1 font-regular mb-6 tracking-tight">
           Master Focus & Get More Done in Less Time
         </h1>
 
         {/* Body Normal (Regular, 17px, 135% LH) */}
-        <p className="max-w-[580px] mx-auto text-neutral-400 text-body mb-10">
+        <p className="max-w-145 mx-auto text-neutral-400 text-body mb-10">
           A step-by-step system to eliminate procrastination, train your brain
           for deep work, and boost productivity effortlessly.
         </p>

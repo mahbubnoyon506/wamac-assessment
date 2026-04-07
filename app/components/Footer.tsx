@@ -1,9 +1,15 @@
 import Image from "next/image";
 import { Divider } from "./ui/Divider";
 
+const images = [
+  "/assets/images/solution4.png",
+  "/assets/images/solution5.png",
+  "/assets/images/solution6.png",
+];
+
 export const Footer = () => {
   return (
-    <footer className="bg-neutral-950 pt-20 pb-10 px-6">
+    <footer className="bg-background pt-10 md:pt-20 pb-5 md:pb-10 px-6">
       <div className="max-w-7xl mx-auto">
         {/* Top Section: CTA Card */}
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-20 gap-10">
@@ -18,20 +24,17 @@ export const Footer = () => {
 
           {/* Join Card */}
           <div className="relative group cursor-pointer bg-primary-500 p-6 rounded-3xl w-full md:w-[320px] overflow-hidden">
-            <div className="flex items-center gap-[-10px] mb-8">
-              {[1, 2, 3].map((i) => (
-                <div
-                  key={i}
-                  className="w-10 h-10 rounded-full border-2 border-primary-500 overflow-hidden bg-neutral-800 first:ml-0 -ml-3"
-                >
-                  <Image
-                    src="/assets/images/Logo.png"
-                    alt="User"
-                    width={40}
-                    height={40}
-                  />
-                </div>
-              ))}
+            <div className="flex items-center justify-between gap-[-10px] mb-8">
+              <div className="flex justify-end -space-x-3">
+                {images.map((n) => (
+                  <div
+                    key={n}
+                    className="relative w-10 h-10 overflow-hidden bg-neutral-800 rounded-[99px]"
+                  >
+                    <Image src={n} alt="user" fill className="object-cover" />
+                  </div>
+                ))}
+              </div>
               <div className="ml-4 p-2 bg-white rounded-full">
                 <svg
                   width="20"

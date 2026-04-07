@@ -1,14 +1,16 @@
-import { Badge } from "./ui/Badge";
+import Badge from "./ui/Badge";
 import { Button } from "./ui/Button";
-import { ChevronUp, ChevronDown, PlayCircle, CheckCircle2 } from "lucide-react";
+import { ChevronUp, ChevronDown, PlayCircle, BadgeCheck } from "lucide-react";
+import IconBox from "./ui/IconBox";
+import CheckIcon from "./ui/CheckIcon";
 
 export const CurriculumSection = () => {
   return (
-    <section className="bg-neutral-950 py-24 px-6">
+    <section className="bg-background py-12 md:py-24 px-6">
       <div className="max-w-7xl mx-auto flex flex-col items-center">
         {/* Section Header */}
-        <Badge>Course Curriculum</Badge>
-        <h2 className="text-h2 font-medium text-center mb-20 max-w-3xl leading-[1.15]">
+        <Badge label="Course Curriculum" />
+        <h2 className="text-h2 font-medium text-center mb-20 max-w-160 leading-[1.15]">
           Mastering Deep Work: A Structured Path to Peak Productivity
         </h2>
 
@@ -98,8 +100,8 @@ export const CurriculumSection = () => {
           </div>
 
           {/* RIGHT: CTA Card */}
-          <div className="lg:col-span-5 bg-neutral-900 border border-neutral-800 rounded-[32px] p-10 lg:sticky lg:top-24">
-            <h3 className="text-h3 font-medium mb-8">
+          <div className="lg:col-span-5 bg-neutral-900 border border-neutral-800 rounded-4xl p-5 md:p-10">
+            <h3 className="text-h3 font-medium mb-16">
               Not only video lessons!
             </h3>
 
@@ -111,7 +113,8 @@ export const CurriculumSection = () => {
                 "Exclusive Community - Connect with others.",
               ].map((item, i) => (
                 <li key={i} className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-primary-500 mt-0.5" />
+                  <IconBox icon={<CheckIcon />} size="sm" />
+
                   <span className="text-body-sm text-neutral-400 leading-relaxed">
                     {item}
                   </span>
@@ -119,10 +122,7 @@ export const CurriculumSection = () => {
               ))}
             </ul>
 
-            <Button
-              variant="primary"
-              className="w-full py-6 text-lg rounded-2xl"
-            >
+            <Button variant="primary" className="w-full text-md rounded-2xl">
               Enroll now
             </Button>
           </div>
