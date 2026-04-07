@@ -18,7 +18,7 @@ export const SoutionSection = () => {
       <div className="max-w-7xl mx-auto">
         {/* Top Content */}
         <div className="text-center mb-12 md:mb-24">
-          <Badge label="Are Distractions Holding You Back?" />
+          <Badge label="Are Distractions Holding You Back?" className="mb-3" />
           <h1 className="font-medium max-w-232 mx-auto leading-[1.15] text-gradient-muted mb-12">
             If you struggle to focus, feel overwhelmed by endl
             <span className="text-neutral-500">

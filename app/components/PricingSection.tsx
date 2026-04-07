@@ -11,7 +11,7 @@ export const PricingSection = () => {
         {/* Left Card: Bonus Information */}
         <div className="lg:col-span-7 bg-neutral-900/40 border border-neutral-800 rounded-4xl p-5 md:p-16 flex flex-col justify-center">
           <div>
-            <Badge label="Introducing" />
+            <Badge label="Introducing" className="mb-3" />
           </div>
 
           <h1 className="text-4xl md:text-5xl font-medium text-white mb-6">
@@ -39,7 +39,7 @@ export const PricingSection = () => {
 
         {/* Right Card: Pricing */}
         <div className="lg:col-span-5 w-full lg:w-112.5 bg-neutral-900/40 border border-blue-900/30 rounded-4xl p-5 md:p-12 relative flex flex-col">
-          <div className="flex justify-between items-start mb-8">
+          <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-8">
             <div>
               <div className="flex items-baseline gap-3 mb-2">
                 <span className="text-5xl font-semibold text-white">$349</span>
@@ -51,7 +51,9 @@ export const PricingSection = () => {
                 30% off until 4d : 2h : 41m : 17s
               </p>
             </div>
-            {/* <Badge label="30% off" /> */}
+            <div className="pt-3 md:pt-0">
+              <Badge label="30% off" className="pt-3 md:pt-0" />
+            </div>
           </div>
 
           <div className="space-y-6 mb-12">

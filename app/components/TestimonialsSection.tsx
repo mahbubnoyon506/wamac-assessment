@@ -74,7 +74,7 @@ export const TestimonialsSection = () => {
     <section className="bg-background py-12 md:py-24 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 lg:px-0 mb-12">
         <div className="flex justify-center">
-          <Badge label="Testimonials" />
+          <Badge label="Testimonials" className="mb-3" />
         </div>
         <h2 className="text-center text-h2 font-medium mb-16 leading-[1.15]">
           Real Results from Real People

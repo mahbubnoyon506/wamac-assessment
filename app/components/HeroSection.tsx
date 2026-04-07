@@ -12,7 +12,7 @@ export const HeroSection = () => {
       {/* CONTENT LAYER */}
       <div className="relative z-10 max-w-7xl mx-auto px-6 text-center">
         {/* Discount Badge */}
-        <Badge label="30% off until 4d : 2h : 41m : 17s" />
+        <Badge label="30% off until 4d : 2h : 41m : 17s" className="mb-3" />
 
         {/* Heading 1 (Regular, 52px, 115% LH) */}
         <h1 className="max-w-180 mx-auto text-h1 font-regular mb-6 tracking-tight">
