@@ -1,6 +1,7 @@
 import localFont from "next/font/local";
 import "./globals.css";
-// import { Navbar } from "./components/Navbar";
+import { Navbar } from "./components/Navbar";
+import { Footer } from "./components/Footer";
 
 const sfPro = localFont({
   src: [
@@ -27,8 +28,9 @@ export default function RootLayout({
   return (
     <html lang="en" className={`dark ${sfPro.variable}`}>
       <body className="font-sans antialiased bg-neutral-950 text-white selection:bg-primary-500/30">
-        {/* <Navbar /> */}
+        <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );
