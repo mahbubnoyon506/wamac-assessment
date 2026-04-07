@@ -220,4 +220,10 @@
         rgba(36, 102, 242, 0.18) 0%,
         transparent 65%);
   }
+
+  .carousel-container-flush-right {
+    /* Calculates the margin needed to align with a max-w-7xl container */
+    margin-right: calc(-50vw + 50%);
+    width: calc(100vw - (100vw - 100%) / 2);
+  }
 }
