@@ -168,7 +168,7 @@ export const CurriculumSection = () => {
           </div>
 
           {/* RIGHT: CTA Card */}
-          <div className="lg:col-span-5 bg-neutral-900/40 border border-neutral-800 rounded-[40px] p-8 md:p-12 sticky top-24">
+          <div className="lg:col-span-5 bg-neutral-900/40 border border-neutral-800 rounded-[40px] p-5 md:p-12 top-24">
             <h3 className="text-3xl font-medium text-white mb-12">
               Not only video lessons!
             </h3>
@@ -189,7 +189,7 @@ export const CurriculumSection = () => {
                 </li>
               ))}
             </ul>
-            <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white h-16 rounded-2xl text-lg font-medium shadow-[0_0_20px_rgba(37,99,235,0.2)]">
+            <Button variant="primary" className="w-full text-md rounded-2xl">
               Enroll now
             </Button>
           </div>
