@@ -1,3 +1,4 @@
+import { CurriculumSection } from "./components/CurriculumSection";
 import { FeaturesSection } from "./components/FeaturesSection";
 import { HeroSection } from "./components/HeroSection";
 import { SoutionSection } from "./components/SoutionSection";
@@ -9,6 +10,7 @@ export default function Home() {
       <SoutionSection />
       <SoutionSection />
       <FeaturesSection />
+      <CurriculumSection />
     </>
   );
 }
