@@ -124,7 +124,7 @@ export const TestimonialsSection = () => {
                     </div>
                   </div>
 
-                  {item.type === "video" ? (
+                  {item.type === "video" && item.thumbnail ? (
                     <div className="absolute inset-0">
                       <Image
                         src={item.thumbnail}

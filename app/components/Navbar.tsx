@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import Image from "next/image";
-import { StatusToggle } from "./Switch";
+import { SwitchTheme } from "./SwitchTheme";
 import { Button } from "./ui/Button";
 import { Divider } from "./ui/Divider";
 
@@ -38,7 +38,7 @@ export const Navbar = () => {
         {/* Right Actions */}
         <div className="flex items-center gap-2 sm:gap-4">
           <div className="">
-            <StatusToggle status="PENDING" />
+            <SwitchTheme />
           </div>
           <div className="hidden lg:block">
             <Button variant="primary" size="sm">
